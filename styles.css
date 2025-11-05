@@ -1,0 +1,298 @@
+/* --- RESET GENERAL --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* --- BARRA SUPERIOR --- */
+.nav-bar {
+  background: linear-gradient(90deg, #0014ff, #007bff);
+  width: 100%;
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-bar ul {
+  list-style: none;
+  display: flex;
+  gap: 80px;
+}
+
+.nav-bar li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: uppercase;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-bar li a:hover {
+  color: #ff0101;
+  transform: scale(1.1);
+}
+
+/* --- BANNER SUPERIOR --- */
+.banner-top {
+  background: linear-gradient(90deg, #0014ff, #007bff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 170px;
+}
+
+.logo {
+  width: 200px;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+/* --- SECCIÓN PRODUCTO MORADA --- */
+.banner-product {
+  background: linear-gradient(90deg, #a55bf5, #7f43af);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  height: 600px;
+  gap: 40px;
+}
+
+.product-image {
+  width: 180px;
+  filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.5));
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.product-image:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(15px 15px 15px rgba(0, 0, 0, 0.7));
+}
+
+/* --- TEXTOS GENERALES --- */
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+
+.title {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 60px;
+}
+
+.subtitle {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 60px;
+  padding-left: 60px;
+}
+
+/* --- BOTÓN “VER MÁS” --- */
+.ver-mas-btn {
+  margin-top: 40px;
+  margin-left: 240px;
+  width: 160px;
+  padding: 15px 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  background: linear-gradient(90deg, #7b2ff7, #1000f3);
+  border: none;
+  border-radius: 50px;
+  text-transform: uppercase;
+  cursor: pointer;
+  letter-spacing: 1px;
+  text-align: center;
+  display: inline-block;
+  animation: aparecer 0.8s ease-out forwards;
+}
+
+@keyframes aparecer {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.ver-mas-btn:hover {
+  transform: scale(1.08);
+  transition: transform 0.3s ease;
+}
+
+/* --- SECCIÓN F1 VERSTAPPEN --- */
+.banner-verstapen {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  overflow: hidden;
+}
+
+.f1-verstapen-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6); /* oscurece para resaltar el texto */
+}
+
+/* --- TEXTO BIOGRAFÍA VERSTAPPEN --- */
+.verstapen-info {
+  position: absolute;
+  top: 80px;
+  left: 60px;
+  max-width: 500px;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 25px 30px;
+  border-radius: 10px;
+  animation: slideIn 1s ease-out forwards;
+}
+
+.verstapen-title {
+  font-size: 48px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #ffd900, #ff0000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 15px;
+}
+
+.verstapen-text {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #f0f0f0;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.vermas-verstapen {
+  position: absolute;
+  bottom: 60px;
+  right: 980px;
+  padding: 15px 25px;
+  font-size: 22px;
+  font-weight: 700;
+  color: white;
+  background: linear-gradient(90deg, #eeff0063, #ff080073);
+  border: none;
+  border-radius: 50px;
+  text-transform: uppercase;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vermas-verstapen:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(255, 230, 0, 0.178);
+}
+
+/* --- BANNER “TE DA ALAS” --- */
+.banner-alas {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  background-color: #ffc0cb; /* fondo rosa */
+}
+
+/* Fondo rosa */
+.alas-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffc0cb;
+  z-index: 1;
+}
+
+/* Lata de Red Bull con efecto hover */
+.redbull-lata {
+  position: absolute;
+  bottom: 0;
+  left: 45%;
+  height: 400px;
+  z-index: 2;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.redbull-lata:hover {
+  transform: scale(1.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Contenedor de texto centrado verticalmente y más arriba */
+.alas-text-container {
+  position: absolute;
+  left: 50px;
+  top: 55%;
+  transform: translateY(-50%);
+  color: #fff;
+  z-index: 3;
+  max-width: 400px;
+  text-align: left;
+}
+
+/* Título */
+.alas-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #ff007f;
+}
+
+/* Botón debajo del texto */
+.ver-mas-btn-alas {
+  display: block;
+  margin-top: 20px;
+  padding: 15px 35px;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  background: linear-gradient(90deg, #ff78ffee, #eb0bdfa4);
+  border: none;
+  border-radius: 50px;
+  text-transform: uppercase;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ver-mas-btn-alas:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+}
